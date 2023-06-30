@@ -1,0 +1,96 @@
+body{
+    background-image: url("pexels-ylanite-koppens-934067.jpg");
+    background-size: cover;
+    
+}
+#heading{
+    width: 100%;
+    margin-top: 0px;
+    border: 2px ridge yellow;
+    box-shadow: 0px 0px 20px orange;
+    padding: 5px;
+    animation-name: xd;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    
+}
+p{
+font-size:24px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+padding: 5px !important;
+word-wrap: break-word;
+padding-top: 3px !important;
+}
+h1{
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
+
+}
+span, h3{
+    text-decoration: underline;
+    width: fit-content;
+    font-size: 24px !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    margin: 10px !important;
+    padding: 5px !important;
+}
+canvas{
+    border: 5px ridge rgb(255, 234, 0);
+    box-shadow: 0px 0px 10px orange;
+    /*animation-name: lol;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;*/
+}
+/*@keyframes lol{
+0%{
+    border: 5px ridge rgb(255, 234, 0);
+    box-shadow: 0px 0px 10px orange; 
+}
+20%{
+    border: 5px ridge rgb(94, 255, 0);
+    box-shadow: 0px 0px 10px rgb(0, 255, 247); 
+}
+40%{
+    border: 5px ridge rgb(0, 17, 255);
+    box-shadow: 0px 0px 10px rgb(255, 0, 212); 
+}
+60%{
+    border: 5px ridge rgb(255, 0, 0);
+    box-shadow: 0px 0px 10px rgb(242, 255, 0); 
+}
+80%{
+    border: 5px ridge rgb(0, 255, 242);
+    box-shadow: 0px 0px 10px rgb(9, 255, 0); 
+}
+100%{
+    border: 5px ridge rgb(255, 166, 0);
+    box-shadow: 0px 0px 10px rgb(238, 0, 255); 
+}
+
+}*/
+@keyframes xd{
+0%{
+    width: 100%;
+    margin-top: 0px;
+    border: 2px ridge yellow;
+    box-shadow: 0px 0px 20px orange;
+    padding: 5px;
+    
+}
+50%{
+    width: 100%;
+    margin-top: 0px;
+    border: 2px ridge rgb(238, 238, 0);
+    box-shadow: 0px 0px 20px rgb(249, 187, 0);
+    padding: 5px;
+    background-image: url("gandalf2.gif");
+    background-size:contain;
+}
+100%{
+    width: 100%;
+    margin-top: 0px;
+    border: 2px ridge rgb(238, 230, 0);
+    box-shadow: 0px 0px 20px rgb(0, 249, 17);
+    padding: 5px;
+    
+}
+}

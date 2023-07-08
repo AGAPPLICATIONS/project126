@@ -36,11 +36,12 @@ span, h3{
 canvas{
     border: 5px ridge rgb(255, 234, 0);
     box-shadow: 0px 0px 10px orange;
-    /*animation-name: lol;
+    top: 300px !important;
+    animation-name: lol;
     animation-duration: 10s;
-    animation-iteration-count: infinite;*/
+    animation-iteration-count: infinite;
 }
-/*@keyframes lol{
+@keyframes lol{
 0%{
     border: 5px ridge rgb(255, 234, 0);
     box-shadow: 0px 0px 10px orange; 
@@ -66,7 +67,7 @@ canvas{
     box-shadow: 0px 0px 10px rgb(238, 0, 255); 
 }
 
-}*/
+}
 @keyframes xd{
 0%{
     width: 100%;

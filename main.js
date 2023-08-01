@@ -3,7 +3,9 @@ rwrx= 0;
 lwry=0;
 rwry=0;
 lwscore=0;
+rwscore=0;
 songstatus="";
+songstatus2="";
 top="";
 inception="";
 peterpantheme="";
@@ -32,14 +34,15 @@ function draw(){
     fill("red");
     stroke("orange");
    songstatus= songfinal.isPlaying();
-   if (lwscore> 0.2) {
+   songstatus2 = songfinal.isPlaying();
+   if (lwscore> 0.2 ) {
     circle(lwrx,lwry,20);
     inception.stop();
     songfinal.stop();
     harrypotterremix.stop();
     discomusiclol.stop();
     top.stop();
- 
+
   
     if (songstatus == false) {
         if(lwry> 0 && lwry <= 225){
@@ -52,14 +55,44 @@ function draw(){
             songfinalname="Inception:time remix";
             songstatus=songfinal.isPlaying();
         }
-        songfinal.play();
+        songstatus2=songfinal.isPlaying();
+    songstatus=songfinal.isPlaying();
+    if(songstatus == false && songstatus2 == false){
+    songfinal.play();
         document.getElementById("songplaying").innerHTML= "Now Playing-"+songfinalname;
+    }
 
     }
 
 
     
    }
+   if(rwscore >0.2){
+    circle(rwrx,rwry,20);
+
+    inception.stop();
+    songfinal.stop();
+    harrypotterremix.stop();
+    discomusiclol.stop();
+    top.stop();
+   if (songstatus2 == false) {
+    if(rwry>0 && rwry<= 225){
+        songfinal=inception;
+        songfinalname="TOP GUN: MAVERICK(inception but with music error)";
+        songstatus2= songfinal.isPlaying();
+    }else if(rwry> 225 && rwry <= 450){
+        songfinal=discomusiclol;
+        songfinalname="HARRY POTTER REMIX(disco but roll with it haha)";
+        songstatus2=songfinal.isPlaying();
+    }
+    songstatus2=songfinal.isPlaying();
+    songstatus=songfinal.isPlaying();
+    if(songstatus == false && songstatus2 == false){
+    songfinal.play();
+        document.getElementById("songplaying").innerHTML= "Now Playing-"+songfinalname;
+    }
+ }
+}
 }
 function modelloaded(){
     console.log("Model is loaded");
@@ -74,5 +107,7 @@ if(results.length > 0){
     console.log(lwrx,lwry, rwrx, rwry);
     lwscore= results[0].pose.keypoints[9].score;
     console.log(lwscore);
+    rwscore = results[0].pose.keypoints[10].score;
+    console.log(rwscore);
 }
 }
